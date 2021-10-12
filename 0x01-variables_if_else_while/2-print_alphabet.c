@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
+ *main - etra code for alphabet in lower case
+ *main - code for alphabet in lower case
  *
- * main - code for alphabet in lower case
- *
- * Return: 0
+ *Return: 0
  *
  */
 int main(void)
