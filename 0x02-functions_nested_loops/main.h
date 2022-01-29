@@ -1,1 +1,6 @@
-added information for the checker
+#ifndef MAIN_H
+#define MAIN_H
+int _putchar(char c);
+
+#endif
+~                
