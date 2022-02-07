@@ -5,7 +5,7 @@
  *
  * Return: void
  */
-int main(void)
+void print_alphabet(void)
 {
 	char beta;																													for (beta = 'a'; beta <= 'z'; beta++)
 	{
