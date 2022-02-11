@@ -8,7 +8,7 @@
  * Description: append a string to another
  * Return: dest
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n);
 {
 	int j = 0;
 	int i = 0;
