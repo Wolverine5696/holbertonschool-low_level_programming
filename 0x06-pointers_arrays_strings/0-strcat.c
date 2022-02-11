@@ -33,13 +33,13 @@ char *_strcat(char *dest, char *src)
 		dest[i] = src[j];
 		i++;
 		j++;
-												}
+	}
 /*
  *
  * end on null byte
  *
  */
 
-			dest[i] = '\0';
-			return (dest);
+	dest[i] = '\0';
+return (dest);
 }
