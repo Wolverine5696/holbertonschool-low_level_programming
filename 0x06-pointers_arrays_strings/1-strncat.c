@@ -1,28 +1,30 @@
 #include "holberton.h"
-
 /**
- * _strncat - appends n src to dest string
- * @dest: string that gets appended
- * @src: strig to append
- * @: number in string to append
- *
+ * _strncat - function start
+ * @src: source srting(s)
+ * @dest: Destination String
+ * @n: number of bytes
+ * Description: append a string to another
  * Return: dest
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
-		int i = 0, j;
+	int j = 0;
+	int i = 0;
 
-		while (*dest != '\0')
-		{
-			dest++;
-			j++;
-		}															while ((*src != '\0') && (i < n))
+	while (*dest != '\0')
+	{
+		dest++;
+		j++;
+	}
+	while ((*src != '\0') && (i < n))
 	{
 		i++;
 		*(dest++) = *(src++);
 		j++;
+
 	}
-	dest = dest - j
+	dest = dest - j;
 	return (dest);
 }
+
