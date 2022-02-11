@@ -5,7 +5,7 @@
 char *_strcat(char *dest, char *src)
 {
 /**
- * use _strlen function to get length ofidest string
+ * use _strlen function to get length of the dest string
  *
  *
  */
@@ -16,12 +16,12 @@ char *_strcat(char *dest, char *src)
  *
  */
 
-	while (dest[j] != '\0')
 	while (src[j] != '\0')
-	{
-	   dest[i] = src[j];
-	   i++;
-	   j++;															}
-	dest[i] = '\0'
-return (dest);
+{
+	dest[i] = src[j];
+i++;
+j++;															}
+		dest[i] = '\0'
+
+			return (dest);
 }
