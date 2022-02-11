@@ -1,44 +1,26 @@
 #include "holberton.h"
 #include "_strlen.c"
-
-
 /**
- * _strcat - appends src to the dest string
- * @dest: string to append by src
- * @src: string to append to dest
- *
+ * _strcat - append a strin to another string
+ * @src: source srting(s)
+ * @dest: Destination String
  * Return: dest
  */
-
-
-
 char *_strcat(char *dest, char *src)
 {
+	int start = 0;
 
-/**
- * use _strlen function to get length ofidest string
- *
- *
- */
-
-	int i = _strlen(dest), j = 0;
-
-/**
- * concatenate strings
- *
- */
-
-	while (src[j] != '\0')
+	while (*dest)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		dest++;
+		start++;
 	}
-/**
- *
- * end on null byte
- *
- */
-	dest[i] = '\0';
-return (dest);
+	while (*src)
+	{
+		src++;
+		*(dest++) = *(src++);
+		start++;
+	}
+	dest = dest - start
+	return (dest);
 }
