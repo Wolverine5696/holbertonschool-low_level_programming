@@ -4,7 +4,7 @@
  * _strncat - appends n src to dest string
  * @dest: string that gets appended
  * @src: strig to append
- * @n: number in string to append
+ * @: number in string to append
  *
  * Return: dest
  */
