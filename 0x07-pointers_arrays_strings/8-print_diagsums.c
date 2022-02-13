@@ -26,6 +26,6 @@ void print_diagsums(int *a, int size)
 		y--;
 		a - a + size;
 	}
-	printf("%d\n", sumr1);
+	printf("%d\n", sumrl);
 return;
 }
