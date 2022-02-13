@@ -7,7 +7,7 @@
 * return s
 */
 char *cap_string(char *s)
-}
+{
 	int i = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
@@ -20,14 +20,18 @@ char *cap_string(char *s)
 		}
 		if (s[i] == ' ')
 		{
-			s[i] = s[i] - 32
-			continue;
+			++i
+			if (s[i] >= 'a' && s[i] <= 'z')
+			{
+				s[i] = s[i] - 32;
+				continue;
+			}
+		}
+		else
+		{
+			if (s[i] >= 'A' && s[i] <= 'Z')
+				s[i] = s[i] + 32;
 		}
 	}
-	else
-	{
-		if (s[i] >= 'A' && s[i] <= 'Z')
-			s[i] = s[i] + 32;
-	}
-	return (s);
+		return (s);
 }
