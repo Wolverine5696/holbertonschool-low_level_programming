@@ -8,30 +8,19 @@
 */
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i, j;
+	char sep[] = " \t\n,;.!?\"(){}"; /* word seperators */
 
-	for (i = 0; s[i] != '\0'; i++)
+	i = 1;
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] -= ('a' - 'A'); /* changes first letter of word */
+	while (s[i] != '\0')
 	{
-		if (i == 0)
-		{
-			if ((s[i] >= 'a' && s[i] <= 'z'))
-				s[i] = s[i] - 32;
-				continue;
-		}
-		if (s[i] == ' ')
-		{
-			++i
-			if (s[i] >= 'a' && s[i] <= 'z')
-			{
-				s[i] = s[i] - 32;
-				continue;
-			}
-		}
-		else
-		{
-			if (s[i] >= 'A' && s[i] <= 'Z')
-				s[i] = s[i] + 32;
-		}
+		for (j = 0; sep[j] != '\0'; j++)
+			if (s[i - 1] == sep[j] && (s[i] >= 'a' && s[i] <= 'z'))
+
+				s[i] -= ('a' - 'A'); /* capiatilzes if after seperator */
+		i++;
 	}
-		return (s);
+	return (s);
 }
