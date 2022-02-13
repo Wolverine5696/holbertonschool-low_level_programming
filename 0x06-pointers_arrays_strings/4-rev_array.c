@@ -3,6 +3,7 @@
 /**
  * main - program that reverses array
  *
+ *prototype void reverse array
  *
  * return
  */
