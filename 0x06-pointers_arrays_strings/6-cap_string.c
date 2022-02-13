@@ -1,6 +1,6 @@
 #include"holberton.h"
 #include"stdio.h"
-
+#include"main.h"
 /**
 * main capitalizes all words on a string
 *
