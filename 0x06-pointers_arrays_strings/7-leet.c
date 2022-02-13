@@ -1,11 +1,10 @@
-#include " holberton.h"
-
+#include "holberton.h"
+#include "stdio.h"
 /**
  * main - function encodes a string
  *
- * * return - address of s
+ * return - address of s
  */
-
 char *leet(char *s);
 {
 	int i;
