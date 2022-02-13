@@ -1,4 +1,3 @@
-#include "_strlen.c"
 #include "holberton.h"
 
 /**
@@ -8,38 +7,21 @@
  *
  * Return: dest
  */
-
-
-
 char *_strcat(char *dest, char *src)
 {
+	int start = 0;
 
-/*
- * use _strlen function to get length of the dest string
- *
- *
- */
-
-	int i = _strlen(dest);
-	int j = 0;
-
-/**
- * concatenate strings
- *
- */
-
-	while (src[j] != '\0')
+	while (*dest)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		dest++;
+		start++;
 	}
-/*
- *
- * end on null byte
- *
- */
-
-	dest[i] = '\0';
-return (dest);
+	while (*src)
+	{
+		src++;
+		*(dest++) = *(src++);
+		start++;
+	}
+	dest = dest - start
+	return (dest);
 }
