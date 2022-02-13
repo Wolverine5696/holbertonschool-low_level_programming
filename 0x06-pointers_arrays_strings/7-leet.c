@@ -5,7 +5,7 @@
  *
  * return - address of s
  */
-char *leet(char *s);
+char *leet(char *s)
 {
 	int i;
 	int j;
