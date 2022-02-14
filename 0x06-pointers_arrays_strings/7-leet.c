@@ -1,13 +1,12 @@
-#include "holberton.h"
-#include "stdio.h"
+#include <stdio.h>
 /**
  * leet - function encodes a stringc
- * @sk: - pointer char sk
+ * @s: - pointer char s
  *
  * Description: this is a string that encodes 1337 into a string
  * Return: address of s
  */
-char *leet(char *sk)
+char *leet(char *s)
 {
 	int i;
 	int j;
