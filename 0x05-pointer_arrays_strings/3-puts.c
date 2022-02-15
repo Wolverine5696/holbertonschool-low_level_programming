@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _puts - Function Start
- *	Description: Prints Text passed in from str
- *	@str: string passed into function
+ * Description: Prints Text passed in from str
+ * @str: string passed into function
  * Return: Void
  */
 void _puts(char *str)
