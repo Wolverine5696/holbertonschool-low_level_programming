@@ -28,6 +28,9 @@ char *_strstr(char *haystack, char *needle)
 				if (needle[j] == '\0')
 					{
 					haystack += i;
-					return (haystack);											    }											}
-	}													    return (0);
+					return (haystack);
+					}
+		}
+	}
+	return (0);
 }
