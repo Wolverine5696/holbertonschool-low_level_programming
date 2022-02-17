@@ -3,10 +3,10 @@
 #include "main.h"
 /**
  * main - function start
- * @argc: number of arguments
- * @argv: arrav vector
+ * @argc: print number of arguments passed into it
+ * @argv: arrav vector void
  *
- * return 0
+ * return EXIT_SUCCESS
  */
 int main(int argc, char *argv[])
 {
