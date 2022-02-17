@@ -10,6 +10,6 @@
 int main(int argc, char *argv[])
 {
 	if (argc > 0)
-		prtintf("%s\n", argv[]);
+		printf("%s\n", argv[]);
 	return (0);
 }
