@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 		int noa = i;
 		int argc = 6;
 
-		for (i = 3; i < argc; i++)
+		for (i = 0; i < argc; i++)
 			printf("argc = %d\n", argc);
 		return (0);
 }
