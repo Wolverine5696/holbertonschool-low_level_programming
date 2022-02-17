@@ -8,10 +8,13 @@
  *
  * return 0
  */
-int main(int argc, __attribute__((unused)) char  *argv[])
+int main(int argc, char *argv[])
 {
 
-		if (argc > 0)
-			printf("%d\n", argc - 1);
+		int noa = i;
+		int argc = 6;
+
+		for (i = 3; i < argc; i++)
+			printf("argc = %d\n", argc);
 		return (0);
 }
