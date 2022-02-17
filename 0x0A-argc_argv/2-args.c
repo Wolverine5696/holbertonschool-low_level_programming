@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-* main: prints all arguments
+* main - prints all arguments passed to it
 * @argc: arguments passed into it
 * @argv: prints arguments in array on newline
 * Return: 0
