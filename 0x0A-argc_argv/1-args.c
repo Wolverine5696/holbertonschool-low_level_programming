@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <main.h>
+#include "main.h"
 /**
  * main - function start
  * @argc: number of arguments
@@ -11,10 +11,10 @@
 int main(int argc, char *argv[])
 {
 
-		int noa = i;
-		int argc = 6;
-
-		for (i = 0; i < argc; i++)
-			printf("argc = %d\n", argc);
+		
+		 
+		(void)argv;	
+		
+		printf("%d\n", argc - 1);
 		return (0);
 }
