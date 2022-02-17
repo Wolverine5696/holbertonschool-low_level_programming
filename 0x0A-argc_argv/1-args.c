@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * main - function start
+ * main - prints arguments passed into it
  * @argc: print number of arguments passed into it
  * @argv: arrav vector void
  *
- * return EXIT_SUCCESS
+ * Return: EXIT_SUCCESS
  */
 int main(int argc, char *argv[])
 {
