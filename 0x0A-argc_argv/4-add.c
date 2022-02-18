@@ -11,9 +11,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int j;
-	int sum;
+	int i = 0;
+	int j = 0;
+	int sum = 0;
 
 	if (argc == 1)
 	{/* if no answer present */
@@ -24,12 +24,14 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; argv[i][j]; j++)
 		{
-			if (isdigit(argv[i][j]))
+			if (!isdigit(argv[i][j]))
 			{
 				printf("error\n");
 				return (1);
 			}
 		}
+		sum = sum + atoi(argv[i]);
 	}
-	sum = sum + atoi(argv[i]);
+	printf("%d\n", sum);
+	return (0);
 }
