@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <limits.h>
 /**
-* Main - allocates memory using malloc
+* Main - malloc_checked functions to malloc int b
 *@b:This is the length to allocate in the memory
 * *Return: Returns a pointer to the allocated memory if malloc fails
 *
@@ -13,6 +13,8 @@
 */
 void *malloc_checked(unsigned int b)
 {
+	int *p;
+
 	p = malloc(b);
 	if (p == NULL)
 		exit(98);
