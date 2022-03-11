@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * length - equals the length of the string
+ * len - equals the length of the string
  *
  * @str: constant string
  *
@@ -22,7 +22,7 @@ int len(const char *str)
  * add_node - function that adds a node at the beginning of the list_t list.
  *
  * @head: Pointer to the head of the linked list
- *
+ * @str: string to the assigned node
  * Return: NULL if it failed or the address of the new element
  *
  */
