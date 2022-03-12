@@ -24,14 +24,14 @@ unsigned int binary_to_uint(const char *b)
 	z = z - 1;
 	while (b[x] != '\0')
 	{
-		if (b[z - i] == '1')
+		if (b[z - x] == '1')
 		{
 			if (x == 0)
 				decimal = decimal + 1;
 			else
-				decimal = decimal + _pow_recursions(2, i);
+				decimal = decimal + _pow_recursions(2, x);
 		}
-		i++;
+		x++;
 	}
 	return (decimal);
 }
