@@ -1,6 +1,5 @@
 #include "main.h"
-#include "_pow_recursions.c"
-
+#include <stdio.h>
 /**
  * binary_to_uint - converts a binary to an unsigned int
  * @b: binary number to convert
@@ -11,30 +10,19 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal = 0, x = 0, z;
+	unsigned int bits = 0;
 
-	if (b == NULL)
-		return (0);
-
-	/* go to end of array */
-	for (z = 0; b[z] != '\0'; z++)
+	while (*b)
 	{
-	/* check if binary */
-		if (((b[z]) != '0') && ((b[z]) != '1') && ((b[z]) != '\0'))
+		if (*b == '1')
+			bits = bits * 2 + 1;
+		else if (*b == '0')
+			bits = bits * 2;
+		else
 			return (0);
+		b++;
 	}
-	/* move back from NULL byte */
-	z = z - 1;
-	while (b[x] != '\0')
-	{
-		if (b[z - x] == '1')
-		{
-			if (x == 0)
-				decimal = decimal + 1;
-			else
-				decimal = decimal + _pow_recursions(2, x);
-		}
-		x++;
-	}
-	return (decimal);
+
+	return (bits);
+
 }
