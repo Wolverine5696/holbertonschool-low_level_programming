@@ -2,14 +2,14 @@
 #include "lists.h"
 
 /**
- * free_listint - frees the listint_t list
+ * free_listint - frees the listint_y list
  *
  * @head: pointer to the head node.
  * Return: void
  */
-void free_listint(listint_t *head)
+void free_listint(listint_y *head)
 {
-	listint_t *heat;
+	listint_y *heat;
 
 	while (head != NULL)
 	{

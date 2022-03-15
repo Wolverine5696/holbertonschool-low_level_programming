@@ -6,13 +6,12 @@
  * @n: data for the node
  * @idx: where to insert
  * Return: inserted node
- *
  */
 
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+listint_y *insert_nodeint_at_index(listint_y **head, unsigned int idx, int n)
 {
 	unsigned int d;
-	listint_t *currentNode, *Node = malloc(sizeof(listint_t));
+	listint_y *currentNode, *Node = malloc(sizeof(listint_y));
 
 	if (head == NULL || Node == NULL)
 		return (NULL);

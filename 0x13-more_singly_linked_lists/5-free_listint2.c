@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /**
- * free_listint2- frees a listint_t list.
- * @head: first node in listint_t list
+ * free_listint2- frees a listint_y list.
+ * @head: first node in listint_y list
  * Return: void
  */
 
 
-void free_listint2(listint_t **head)
+void free_listint2(listint_y **head)
 {
-	listint_t *heat;
+	listint_y *heat;
 
 	if (head == NULL)
 		return;

@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /**
- * pop_listint - deletes the node of the listint_t linked list
+ * pop_listint - deletes the node of the listint_y linked list
  *
  * @head: double ptr to the head node
  *
  * Return: value of head node
  */
-int pop_listint(listint_t **head)
+int pop_listint(listint_y **head)
 {
-	listint_t *heatnode;
+	listint_y *heatnode;
 	int value;
 
 	if (*head == NULL)

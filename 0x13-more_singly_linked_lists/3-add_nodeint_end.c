@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * add_nodeint_end - add a new head node at the tail of the listint_t list
+ * add_nodeint_end - add a new head node at the tail of the listint_y list
  * @head: double pointer to the current head
  * @n: int to put in new node
  *
@@ -10,11 +10,11 @@
  *
  */
 
-listint_t *add_nodeint_end(listint_t **head, const int n)
+listint_y *add_nodeint_end(listint_y **head, const int n)
+{
+	listint_y = *node, *nodeend;
 
-	listint_t = *node, *nodeend;
-
-	node = malloc(sizeof(listint_t));
+	node = malloc(sizeof(listint_y));
 		if (node == NULL)
 			return (NULL);
 
