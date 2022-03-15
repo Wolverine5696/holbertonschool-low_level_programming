@@ -7,9 +7,9 @@
  * Return: 1 if success or -1 upon failure.
  */
 
-int delete_nodeint_at_index(listint_y **head, unsigned int index)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_y *nextNode, *currentNode, *tempNode = *head;
+	listint_t *nextNode, *currentNode, *tempNode = *head;
 	unsigned int k;
 
 	if (*head == NULL || head == NULL)

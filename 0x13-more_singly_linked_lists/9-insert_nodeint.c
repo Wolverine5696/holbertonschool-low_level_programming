@@ -8,10 +8,10 @@
  * Return: inserted node
  */
 
-listint_y *insert_nodeint_at_index(listint_y **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int d;
-	listint_y *currentNode, *Node = malloc(sizeof(listint_y));
+	listint_t *currentNode, *Node = malloc(sizeof(listint_t));
 
 	if (head == NULL || Node == NULL)
 		return (NULL);
