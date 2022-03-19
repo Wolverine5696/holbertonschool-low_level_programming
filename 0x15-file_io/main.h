@@ -4,10 +4,9 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
+ * main - this is the header file for this program.
  *
- *
- *
- *
+ * Return: void
  */
 
 int _putchar(char c);
