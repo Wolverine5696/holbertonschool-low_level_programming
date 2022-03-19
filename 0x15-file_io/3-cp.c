@@ -1,49 +1,73 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - copies the content of a file to another file
- * @argc: array
- * @argv: character vectors
- * Return: success or failure
+ * closer
+ * @fd: file to close
+ * Return: void
  */
-int main(int argc, char *argv[])
+void closer(int fd)
 {
-	int fd, fdx;
-	char buffer[1024];
-/*
- * char BUFFER_SIZE = atoi(argv[3]);
- */
-	int z;
+	int i;
 
+	i = close(fd);
+
+	if (i == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+
+
+}
+
+/**
+ * argccheck - makes sure argc = 3
+ * @argc: paramaters passed in CLI
+ *
+ */
+
+void argccheck(int argc)
+{
 	if (argc != 3)
 	{
-		printf("Usage: %s <source file> <destination file>\n", argv[0]);
-		exit(EXIT_FAILURE);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+			exit(97);
 	}
-	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
+}
+
+/**
+ * main - copies from one file to another
+ * @argc: arguments passed
+ * @argv: files to be copied
+ * Return: 1 if success
+ */
+
+int main(int argc, char *argv[])
+{
+
+	int fromfile, tofile, writefile;
+	char buffer[1024];
+
+	argccheck(argc);
+	fromfile = open(argv[1], O_RDONLY);
+	if (fromfile == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+			exit(98);
+	tofile = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (tofile == -1)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
+			exit(99);
+	while ((writefile = read(fromfile, buffer, 1024)) != 0)
 	{
-		perror("open");
-		exit(EXIT_FAILURE);
+		if (writefile == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+			exit(98);
+		if (write(tofile, buffer, writefile) != writefile)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
+			exit(99);
 	}
-	fdx = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fdx == -1)
-	{
-		perror("open");
-		exit(EXIT_FAILURE);
-	}
-	while ((z = read(fd, buffer, 1024)) > 0)
-	{
-		write(fdx, buffer, 1024);
-	}
-	if (z == -1)
-	{
-		perror("read");
-		exit(EXIT_FAILURE);
-	}
-	close(fd);
-	close(fdx);
-	exit(EXIT_SUCCESS);
+	closer(fromfile);
+	closer(tofile);
 
 	return (0);
 }
