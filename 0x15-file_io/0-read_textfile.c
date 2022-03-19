@@ -11,8 +11,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buffer;
-	int Readx;
-	int writex;
+	int lenRead;
+	int lenWrite;
 
 	if (filename == NULL)
 		return (0);
@@ -25,12 +25,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 
-	Readx = read(fd, buffer, letters);
+	lenRead = read(fd, buffer, letters);
 
-	writex = write(STDOUT_FILENO, buffer, Read);
-	if (writex != Readx && writex == -1)
+	lenwrite = write(STDOUT_FILENO, buffer, lenRead);
+	if (lenWrite != lenRead && lenWrite == -1)
 		return (0);
 	free(buffer);
 	close(fd);
-	return (Readx);
+	return (lenRead);
 }
