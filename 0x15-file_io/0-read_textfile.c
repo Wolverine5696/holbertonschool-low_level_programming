@@ -10,7 +10,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char *red;
+	char *buffer;
 	int Readx;
 	int writex;
 
@@ -20,17 +20,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	red = malloc(letters * sizeof(char));
+	buffer = malloc(letters * sizeof(char));
 
-	if (red == NULL)
+	if (buffer == NULL)
 		return (0);
 
-	Readx = read(fd, red, letters);
+	Readx = read(fd, buffer, letters);
 
-	writex = write(STDOUT_FILENO, red, Read);
+	writex = write(STDOUT_FILENO, buffer, Read);
 	if (writex != Readx && writex == -1)
 		return (0);
-	free(red);
+	free(buffer);
 	close(fd);
 	return (Readx);
 }
