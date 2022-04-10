@@ -1,7 +1,19 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef LISTS_H
+#define LISTS_H
 
-typedef struct dlistint_t
+#include <string.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <stdio.h>
+
+/**
+ * struct dlistint_s doubly linked list
+ * @n int
+ * @prev: pointer to the previous node
+ * @next: pointer to the next node
+ */
+
+typedef struct dlistint_s
 {
 	int n;
 	struct dlistint_t *prev;
