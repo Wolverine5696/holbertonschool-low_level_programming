@@ -8,6 +8,7 @@
 
 /**
  * struct dlistint_s doubly linked list
+ * @dlistint_len: elements of the list 
  * @n int
  * @prev: pointer to the previous node
  * @next: pointer to the next node

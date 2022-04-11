@@ -3,24 +3,24 @@
 #include <string.h>
 
 /**
- * main - returns the number of elements in the list
+ * dlistint_len - returns the number of elements in the list
  *
- * @h: listcount pointer
+ * @h: this is the input struct
  *
- * return: listcount
+ * return: the number of elements of the struct
  */
+
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t listcount = 0;
-	const dlistint_t *razor = h;
+	int listcount = 0;
 
 	if (h == NULL)
 		return (0);
 
-	while (razor != NULL)
+	while (h != NULL)
 	{
+		h = h->next;
 		listcount++;
-		razor = razor->next;
 	}
 	return (listcount);
-}	
+}
