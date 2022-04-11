@@ -1,10 +1,10 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * main - to print the doubly linked list
+ * print_dlistint - to print the doubly linked list
  *
- * @h: dll pointer
- *
+ * @h: dlistint_t pointer
+ * 
  * Return: 0
  */
 size_t print_dlistint(const dlistint_t *h)
