@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_t - function adds a new node at the beginning of the add_dnodeint_t
+ * add_dnodeint - adds a node at the beginning of the add_dnodeint
  * list.
  *
  * @head: this is the input struct
