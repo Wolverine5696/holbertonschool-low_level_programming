@@ -4,7 +4,7 @@
  * print_dlistint - to print the doubly linked list
  *
  * @h: dlistint_t pointer
- * 
+ *
  * Return: 0
  */
 size_t print_dlistint(const dlistint_t *h)
