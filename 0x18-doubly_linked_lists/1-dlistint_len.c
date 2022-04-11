@@ -5,9 +5,9 @@
 /**
  * dlistint_len - returns the number of elements in the list
  *
- * @h: this is the input struct
+ * @h: this is the input struct pointer
  *
- * return: the number of elements of the struct
+ * Return: the number of elements of the struct
  */
 
 size_t dlistint_len(const dlistint_t *h)
