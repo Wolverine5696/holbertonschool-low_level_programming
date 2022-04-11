@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * dlistint_len - returns the number of elements in the list
+ * dlistint_len - returns the number of elements in dlistint_t
  *
  * @h: this is the input struct pointer
  *
