@@ -1,8 +1,10 @@
 #ifndef HASH_TABLES_H
 #define HASH_TABLES_H
-
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 /**
- * struct_hash_node_s - node of a hash table
+ * struct hash_node_s - node of a hash table
  * @key: the key string
  * @value: corresponding to a key
  * @next: a pointer to the next node of the list
@@ -16,7 +18,7 @@ typedef struct hash_node_s
 } hash_node_t;
 
 /**
- * struct_hash_table_s - hash table structure
+ * struct hash_table_s - hash table structure
  *
  * @size: size of the array
  * @array: an array of this size
