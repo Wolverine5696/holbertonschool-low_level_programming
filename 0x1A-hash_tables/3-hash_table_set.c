@@ -50,7 +50,7 @@ int add_node(hash_node_t **head, char *key, char *value)
 			free(aux->value);
 			aux->value = strdup(value);
 			free(new_node);
-				return (1);
+			return (1);
 		}
 		aux = aux->next;
 	}
@@ -58,5 +58,5 @@ int add_node(hash_node_t **head, char *key, char *value)
 	new_node->value = strdup(value);
 	new_node->next = (*head);
 	(*head) = new_node;
-		return (1);
+	return (1);
 }
