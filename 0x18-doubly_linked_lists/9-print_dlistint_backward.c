@@ -22,7 +22,7 @@ size_t print_dlistint_backward(const dlistint_t *h)
 
 	for (listcount = 0; red != NULL; red = red->prev)
 	{
-		printf("%d\n", red->);
+		printf("%d\n", red->n);
 		listcount++;
 	}
 	return (listcount);
